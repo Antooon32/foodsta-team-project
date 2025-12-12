@@ -1,12 +1,12 @@
 {
-  "name": "Vite_vanilla-app-template",
+  "name": "foodsta-team-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://tate-t.github.io/Vite_vanilla-app-template/",
+  "homepage": "https://antooon32.github.io/foodsta-team-project/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Vite_vanilla-app-template/",
+    "build": "vite build --base=/foodsta-team-project/",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
