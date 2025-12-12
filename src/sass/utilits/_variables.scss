@@ -1,0 +1,54 @@
+@use "sass:string";
+
+$family: (
+  font-family: "Roboto",
+  second-family: "Kalam",
+  third-family: "Inter",
+);
+
+$main: (
+    yellow-main: #ffe550,
+);
+
+$dark: (
+    dark-green: #7eb101,
+    black: #2c2c2c,
+);
+
+$light: (
+    white: #fefefe,
+    button-green: #bbf330,
+    button-green2: #a7ce47,
+);
+
+$text: (
+  tekst: #3d3d3d,
+	tekst2: #969696,
+	tekst3: #4a4a4a,
+);
+
+$var-maps: (
+  "family": $family,
+  "main": $main,
+  "dark": $dark,
+  "light": $light,
+  "text": $text,
+);
+
+@function get-var($variable-name) {
+  $parts: string.split($variable-name, '__');
+  $prefix: nth($parts, 1);
+  $key: nth($parts, 2);
+
+  @if not map-has-key($var-maps, $prefix) {
+    @error "Невідомий префікс '#{$prefix}' для змінної '#{$variable-name}'. Допустимі префікси: #{map-keys($var-maps)}.";
+  }
+
+  $target-map: map-get($var-maps, $prefix);
+
+  @if not map-has-key($target-map, $key) {
+    @error "Ключ '#{$key}' не знайдено в мапі '#{$prefix}'.";
+  }
+
+  @return map-get($target-map, $key);
+}
