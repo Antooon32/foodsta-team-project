@@ -1,0 +1,45 @@
+@mixin multi-transition($properties, $duration: 500ms, $timing-function: cubic-bezier(0.4, 0, 0.2, 1), $delay: 0s) {
+    $transitions: (
+    );
+
+@if type-of($properties)=="list" {
+    @each $prop in $properties {
+        $transitions: append($transitions, #{$prop} $duration $timing-function $delay, comma);
+    }
+}
+
+@else {
+    $transitions: #{$properties} $duration $timing-function $delay;
+}
+
+transition: $transitions;
+}
+
+// @mixin button($w, $h, $f: 16px, $r: 60px) {
+//     border-radius: $r;
+//     width: $w;
+//     height: $h;
+//     background: get-var(dark__first);
+//     padding: 14px 28px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: baseline;
+//     gap: 5px;
+//     font-weight: 700;
+//     font-size: 18px;
+//     line-height: 110%;
+//     letter-spacing: -0.04em;
+//     text-align: center;
+//     font-size: $f;
+//     fill: get-var(light__third);
+//     color: get-var(light__third);
+//     cursor: pointer;
+//     border: 1px solid get-var(light__third);
+//     @include multi-transition((color, border, fill));
+
+//     &:hover {
+//         color: get-var(main__second);
+//         border: 1px solid get-var(main__second);
+//         fill: get-var(main__second);
+//     }
+// }
