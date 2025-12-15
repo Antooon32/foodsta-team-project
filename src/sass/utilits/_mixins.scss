@@ -15,31 +15,26 @@
 transition: $transitions;
 }
 
-// @mixin button($w, $h, $f: 16px, $r: 60px) {
-//     border-radius: $r;
-//     width: $w;
-//     height: $h;
-//     background: get-var(dark__first);
-//     padding: 14px 28px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: baseline;
-//     gap: 5px;
-//     font-weight: 700;
-//     font-size: 18px;
-//     line-height: 110%;
-//     letter-spacing: -0.04em;
-//     text-align: center;
-//     font-size: $f;
-//     fill: get-var(light__third);
-//     color: get-var(light__third);
-//     cursor: pointer;
-//     border: 1px solid get-var(light__third);
-//     @include multi-transition((color, border, fill));
+@mixin button($w, $h, $b: #fff, $bh: #fff, $brs: 0px, $br: get-var(dark__green1), $brh: get-var(dark__green1), $f: 13px, $r: 30px) {
+    border-radius: $r;
+    width: $w;
+    height: $h;
+    background: $b;
+    // padding: 14px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    line-height: 150%;
+    text-align: center;
+    font-size: $f;
+    color: get-var(dark__black1);
+    cursor: pointer;
+    border: $brs solid $br;
+    @include multi-transition((border, background-color));
 
-//     &:hover {
-//         color: get-var(main__second);
-//         border: 1px solid get-var(main__second);
-//         fill: get-var(main__second);
-//     }
-// }
+    &:hover {
+        background-color: $bh;
+        border: $brs solid $brh;
+    }
+}
