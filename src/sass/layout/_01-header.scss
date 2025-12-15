@@ -1,0 +1,26 @@
+.header {
+    margin-bottom: 60px;
+    box-shadow: 0 4px 24px 0 rgba(105, 105, 105, 0.1);
+
+    .container {
+        display: flex;
+        gap: 186px;
+        justify-content: center;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .modal-open {
+        display: none;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .burger-open {
+        fill: get-var(dark__green1);
+    }
+}

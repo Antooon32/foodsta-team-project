@@ -1,0 +1,98 @@
+.hero {
+    background-image: url(../images/hero-background-mob.webp);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+
+    .hero-content {
+        margin-bottom: 91px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        &__title {
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        &__description {
+            font-weight: 400;
+            line-height: 150%;
+        }
+
+        &__button {
+            @include button(98px, 32px, get-var(light__button-green), #b5ff00)
+        }
+    }
+
+    .slider {
+        display: none;
+    }
+
+    &__picture {
+        display: flex;
+        height: 280px;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../images/ellipse-1.png), url(../images/ellipse-2.png);
+        background-size: 255px 255px, 280px 280px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 60px;
+
+        & picture {
+            margin-bottom: 65px;
+        }
+    }
+
+    .hero-content2 {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        &__title {
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        .hero-content2-list {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+
+            &__icon {
+                background-color: #fff;
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                margin-bottom: 8px;
+            }
+
+            &__title {
+                font-weight: 700;
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__btn-content {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        &__button {
+            @include button(106px, 40px, $brs: 2px, $brh: #597d00)
+        }
+
+        &__link {
+            font-size: 13px;
+            line-height: 150%;
+            color: #000;
+        }
+    }
+}

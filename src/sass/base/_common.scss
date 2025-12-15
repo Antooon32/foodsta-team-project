@@ -2,3 +2,8 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: get-var(family__font-family);
+    font-size: 14px;
+    color: get-var(dark__black1);
+}
