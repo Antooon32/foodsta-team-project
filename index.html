@@ -16,13 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Kalam&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     
-    <script type="module" crossorigin src="/foodsta-team-project/assets/index-ef6ddad9.js"></script>
-    <link rel="stylesheet" href="/foodsta-team-project/assets/index-2472d200.css">
+    <script type="module" crossorigin src="/foodsta-team-project/assets/index-d5a12cb4.js"></script>
+    <link rel="stylesheet" href="/foodsta-team-project/assets/index-ff4a33d8.css">
   </head>
   <body>
     <header class="header">
     <div class="container">
-        <div class="logo"></div>
+        <div class="logo">
+            <a class="logo__link" href="#">
+                <svg class="logo__svg" width="66" height="52">
+                    <use href="/foodsta-team-project/assets/logo-2b9dde94.svg"></use>
+                </svg>
+            </a>
+        </div>
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-list__item"><a class="nav-list__link" href="#">Home</a></li>
@@ -33,7 +39,11 @@
             </ul>
         </nav>
         <button class="modal-open">Order Now</button>
-        <button class="burger-open"></button>
+        <button class="burger-open">
+            <svg class="burger-open__svg" width="24" height="24">
+                <use href="/foodsta-team-project/assets/sprite-1d7c7c25.svg#icon-burger"></use>
+            </svg>
+        </button>
         <div class="burger">
             <button class="burger-close"></button>
             <ul class="bnav-list">
@@ -62,89 +72,85 @@
                 <li class="slider-buttons-list__item">
                     <button class="slider-buttons-list__button slider-buttons-list__button--prev" type="button"
                         data-slider-prevBtn>
-                        <!-- <svg width="15px" height="24px">
-                            <use href="./images/symboldefs.svg#left"></use>
-                        </svg> -->
+                        <svg width="56px" height="48px">
+                            <use href="/foodsta-team-project/assets/sprite-1d7c7c25.svg#icon-arrow-left"></use>
+                        </svg>
                     </button>
                 </li>
                 <li class="slider-buttons-list__item">
                     <button class="slider-buttons-list__button slider-buttons-list__button--next" type="button"
                         data-slider-nextBtn>
-                        <!-- <svg width="15px" height="24px">
-                            <use href="./images/symboldefs.svg#right"></use>
-                        </svg> -->
+                        <svg width="56px" height="48px">
+                            <use href="/foodsta-team-project/assets/sprite-1d7c7c25.svg#icon-arrow-right"></use>
+                        </svg>
                     </button>
                 </li>
             </ul>
 
             <ul class="slider-list">
                 <li class="slider-list__item">
-                    <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+                    <picture>
+                        <source srcset="/foodsta-team-project/assets/salad-desktop-62a28e0c.webp 1x, /foodsta-team-project/assets/salad-desktop@2x-0deacb8e.webp 2x" media="(min-width: 1280px)">
+                        <source srcset="/foodsta-team-project/assets/salad-tablet-3fa80fce.webp 1x, /foodsta-team-project/assets/salad-tablet@2x-0c534dc1.webp 2x" media="(min-width: 768px)">
+                        <img src="/foodsta-team-project/assets/salad-tablet-3fa80fce.webp" alt="Salad">
+                    </picture>
                 </li>
                 <li class="slider-list__item">
-                    <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+                    <picture>
+                        <source srcset="/foodsta-team-project/assets/salad2-desktop-fb90ca04.webp 1x, /foodsta-team-project/assets/salad2-desktop@2x-3e47586a.webp 2x" media="(min-width: 1280px)">
+                        <source srcset="/foodsta-team-project/assets/salad2-tablet-7d951d75.webp 1x, /foodsta-team-project/assets/salad2-tablet@2x-44066a4a.webp 2x" media="(min-width: 768px)">
+                        <img src="/foodsta-team-project/assets/salad2-tablet-7d951d75.webp" alt="Salad">
+                    </picture>
                 </li>
                 <li class="slider-list__item">
-                    <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+                    <picture>
+                        <source srcset="/foodsta-team-project/assets/salad3-desktop-69e484bd.webp 1x, /foodsta-team-project/assets/salad3-desktop@2x-8b0ab9ee.webp 2x" media="(min-width: 1280px)">
+                        <source srcset="/foodsta-team-project/assets/salad3-tablet-f2768ba5.webp 1x, /foodsta-team-project/assets/salad3-tablet@2x-bf125980.webp 2x" media="(min-width: 768px)">
+                        <img src="/foodsta-team-project/assets/salad3-tablet-f2768ba5.webp" alt="Salad">
+                    </picture>
                 </li>
             </ul>
         </div>
 
         <div class="hero__picture">
-            <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+            <picture>
+                <source srcset="/foodsta-team-project/assets/big-apple-desktop-1a20fa1b.webp 1x, /foodsta-team-project/assets/big-apple-desktop@2x-8d608b32.webp 2x" media="(min-width: 1280px)">
+                <source srcset="/foodsta-team-project/assets/big-apple-tablet-92f8b046.webp 1x, /foodsta-team-project/assets/big-apple-tablet@2x-6d3062bd.webp 2x" media="(min-width: 768px)">
+                <source srcset="/foodsta-team-project/assets/big-apple-mobile-8605bb8b.webp 1x, /foodsta-team-project/assets/big-apple-mobile@2x-2af31e71.webp 2x" media="(min-width: 320px)">
+                <img src="/foodsta-team-project/assets/big-apple-mobile-8605bb8b.webp" alt="Apple">
+            </picture>
         </div>
         <div class="hero-content2">
             <h2 class="hero-content2__title">What’s Special About Our Offerings</h2>
-            <p class="hero-content2__description">Lorem ipsum dolor sit amet, consectetur 
-                adipiscing elit. Suspendisse varius enim in eros elementum tristique. 
+            <p class="hero-content2__description">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Suspendisse varius enim in eros elementum tristique.
                 Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
             <ul class="hero-content2-list">
                 <li class="hero-content2-list__item">
-                    <div class="hero-content2-list__icon"></div>
+                    <div class="hero-content2-list__icon">
+                        <svg width="32px" height="32px">
+                            <use href="/foodsta-team-project/assets/rocket-icon-b5904141.svg"></use>
+                        </svg>
+                    </div>
                     <h3 class="hero-content2-list__title">Fasest Delivery</h3>
-                    <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur 
+                    <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit. Suspendisse varius enim in eros.</p>
                 </li>
                 <li class="hero-content2-list__item">
-                    <div class="hero-content2-list__icon"></div>
+                    <div class="hero-content2-list__icon">
+                        <svg width="32px" height="32px">
+                            <use href="/foodsta-team-project/assets/touch-icon-46c67c6e.svg"></use>
+                        </svg>
+                    </div>
                     <h3 class="hero-content2-list__title">Easy To Order</h3>
-                    <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur 
+                    <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit. Suspendisse varius enim in eros.</p>
                 </li>
             </ul>
-            <button class="hero-content2__button">Order Now</button>
+            <div class="hero-content2__btn-content">
+                <button class="hero-content2__button">Order Now</button>
+                <a class="hero-content2__link" href="#">Read More &gt;</a>
+            </div>
         </div>
     </div>
 </section>
@@ -159,70 +165,40 @@
 
         <ul class="favorites-list">
             <li class="favorites-list__item">
-                <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+                <picture>
+                    <source srcset="/foodsta-team-project/assets/gamburger-6fc87134.webp 1x, /foodsta-team-project/assets/gamburger@2x-294311c3.webp 2x">
+                    <img src="/foodsta-team-project/assets/gamburger-6fc87134.webp" alt="Diving">
+                </picture>
             </li>
             <li class="favorites-list__item">
-                <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+                <picture>
+                    <source srcset="/foodsta-team-project/assets/pasta-1dcff703.webp 1x, /foodsta-team-project/assets/pasta@2x-935b59bb.webp 2x">
+                    <img src="/foodsta-team-project/assets/pasta-1dcff703.webp" alt="Diving">
+                </picture>
             </li>
             <li class="favorites-list__item">
-                <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+                <picture>
+                    <source srcset="/foodsta-team-project/assets/pizza-0c0e0200.webp 1x, /foodsta-team-project/assets/pizza@2x-50ac3840.webp 2x">
+                    <img src="/foodsta-team-project/assets/pizza-0c0e0200.webp" alt="Diving">
+                </picture>
             </li>
             <li class="favorites-list__item">
-                <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+                <picture>
+                    <source srcset="/foodsta-team-project/assets/chicken-b3daae72.webp 1x, /foodsta-team-project/assets/chicken@2x-4bc6706a.webp 2x">
+                    <img src="/foodsta-team-project/assets/chicken-b3daae72.webp" alt="Diving">
+                </picture>
             </li>
             <li class="favorites-list__item">
-                <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+                <picture>
+                    <source srcset="/foodsta-team-project/assets/salat-e6f0dbfb.webp 1x, /foodsta-team-project/assets/salat@2x-67e76731.webp 2x">
+                    <img src="/foodsta-team-project/assets/salat-e6f0dbfb.webp" alt="Diving">
+                </picture>
             </li>
             <li class="favorites-list__item">
-                <!-- <picture>
-                        <source srcset="./images/img-diving-desktop.webp     1x,
-                                ./images/img-diving-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                        <source srcset="./images/img-diving-tablet.webp    1x,
-                                ./images/img-diving-tablet@2x.webp     2x" media="(min-width: 768px)">
-                        <source srcset="./images/img-diving.webp   1x, 
-                                ./images/img-diving@2x.webp   2x" media="(min-width: 320px)">
-                        <img src="./images/img-diving.webp" alt="Diving">
-                    </picture> -->
+                <picture>
+                    <source srcset="/foodsta-team-project/assets/borshch-cc9c1ace.webp 1x, /foodsta-team-project/assets/borshch@2x-58e23e86.webp 2x">
+                    <img src="/foodsta-team-project/assets/borshch-cc9c1ace.webp" alt="Diving">
+                </picture>
             </li>
         </ul>
     </div>
