@@ -3,7 +3,6 @@
     background-position: bottom;
     background-repeat: no-repeat;
     padding-bottom: 60px;
-    margin-bottom: 60px;
 
     .hero-content {
         margin-bottom: 91px;
@@ -22,7 +21,7 @@
         }
 
         &__button {
-            @include button(98px, 32px, get-var(light__button-green), #b5ff00)
+            @include button(98px, 32px, get-var(light__button-green), #b5ff00);
         }
     }
 
@@ -86,7 +85,7 @@
         }
 
         &__button {
-            @include button(106px, 40px, $brs: 2px, $brh: #597d00)
+            @include button(106px, 40px, $brs: 2px, $brh: #597d00);
         }
 
         &__link {

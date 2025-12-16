@@ -1,0 +1,84 @@
+.favorites {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 42px;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: 60px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 16px;
+        }
+    }
+
+    .favorites-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            gap: 32px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            background-image: url(../images/favorites-ring.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 280px;
+            height: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                width: 336px;
+                height: 336px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                width: 394px;
+                height: 394px;
+            }
+        }
+
+        &__picture {
+            display: block;
+            width: 223px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                width: 268px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                width: 315px;
+            }
+        }
+
+        &__item:nth-last-child(-n + 3) {
+            display: none;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                display: flex;
+            }
+        }
+    }
+}
