@@ -6,14 +6,43 @@
         display: flex;
         gap: 186px;
         justify-content: center;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            gap: 0;
+            align-items: center;
+        }
     }
 
-    .nav {
+    .logo {
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            margin-right: 191px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            margin-right: 735px;
+        }
+    }
+
+    .nav-list {
         display: none;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            display: flex;
+            gap: 28px;
+            margin-right: 30px;
+        }
+
+        &__link {
+            color: #000;
+        }
     }
 
     .modal-open {
         display: none;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            @include button(98px, 32px, get-var(light__button-green), #b5ff00)
+        }
     }
 
     .burger {
@@ -22,5 +51,9 @@
 
     .burger-open {
         fill: get-var(dark__green1);
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            display: none;
+        }
     }
 }
