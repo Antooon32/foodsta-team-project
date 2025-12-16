@@ -3,9 +3,8 @@
     box-shadow: 0 4px 24px 0 rgba(105, 105, 105, 0.1);
 
     .container {
-        display: flex;
-        gap: 186px;
-        justify-content: center;
+        display: flex; 
+        justify-content: space-between;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             gap: 0;
