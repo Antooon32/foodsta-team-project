@@ -4,20 +4,68 @@
     background-repeat: no-repeat;
     padding-bottom: 60px;
 
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        padding-bottom: 100px;
+        background-image: url(../images/hero-background-tab.webp);
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        padding-bottom: 43px;
+        background-image: url(../images/hero-background-des.webp);
+    }
+
+    .container {
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            position: relative;
+        }
+    }
+
     .hero-content {
         margin-bottom: 91px;
         display: flex;
         flex-direction: column;
         gap: 28px;
 
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            gap: 43px;
+            margin-bottom: 115px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            gap: 28px;
+            margin-bottom: 280px;
+            width: 502px;
+        }
+
         &__title {
             font-weight: 700;
             font-size: 28px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 42px;
+                line-height: 120%;
+                width: 468px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                font-size: 48px;
+                width: auto;
+            }
         }
 
         &__description {
             font-weight: 400;
             line-height: 150%;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 16px;
+                width: 336px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                width: auto;
+                margin-bottom: 12px;
+            }
         }
 
         &__button {
@@ -27,6 +75,71 @@
 
     .slider {
         display: none;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            position: absolute;
+            left: 400px;
+            top: 88px;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            width: 336px;
+            height: 320px;
+            background-image: url(../images/favorites-ring.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 336px 320px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            left: 639px;
+            top: -46px;
+            width: 608px;
+            height: 580px;
+            background-size: 608px 580px;
+        }
+
+        .slider-buttons-list {
+            position: absolute;
+            z-index: 9999;
+            left: 0;
+            top: calc(50% - 20px);
+            display: flex;
+            gap: 245px;
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                gap: 512px;
+            }
+
+            &__button {
+                width: 48px;
+                height: 40px;
+                padding: 0;
+            }
+        }
+
+        .slider-list {
+            display: flex;
+            flex-shrink: 0;
+            gap: 60px;
+
+            &__item {
+                width: 336px;
+                display: flex;
+                justify-content: center;
+
+                @media screen and (min-width: getBreakPoint(desktop)) {
+                    width: 608px;
+                }
+            }
+        }
+    }
+
+    &__part2 {
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            display: flex;
+        }
     }
 
     &__picture {
@@ -40,8 +153,52 @@
         background-position: center;
         margin-bottom: 60px;
 
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            height: 394px;
+            background-size: 325px 325px, 357px 357px;
+            background-position: 15px, left;
+            justify-content: start;
+            align-items: end;
+            padding-bottom: 65px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            height: 604px;
+            align-items: center;
+            background-size: 502px 502px, 550px 550px;
+            margin-bottom: 0;
+        }
+
         & picture {
             margin-bottom: 65px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                margin-right: 75px;
+                margin-left: 48px;
+                margin-bottom: 0px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                margin: 0;
+                margin-left: 69px;
+                margin-right: 159px;
+            }
+        }
+
+        &--dop {
+            display: none;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                display: block;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                display: none;
+            }
+
+            &--first {
+                margin-right: 44px;
+            }
         }
     }
 
@@ -50,15 +207,48 @@
         flex-direction: column;
         gap: 28px;
 
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            gap: 20px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            width: 573px;
+            padding-top: 83px;
+        }
+
         &__title {
             font-weight: 700;
             font-size: 28px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 42px;
+                width: 526px;
+            }
+        }
+
+        &__description {
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 16px;
+                margin-bottom: 20px;
+                width: 500px;
+            }
         }
 
         .hero-content2-list {
             display: flex;
             flex-direction: column;
             gap: 28px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                flex-direction: row;
+                gap: 116px;
+                margin-bottom: 20px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                gap: 67px;
+                margin-bottom: 12px;
+            }
 
             &__icon {
                 background-color: #fff;
@@ -92,6 +282,10 @@
             font-size: 13px;
             line-height: 150%;
             color: #000;
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                display: none;
+            }
         }
     }
 }

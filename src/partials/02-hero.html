@@ -13,7 +13,7 @@
                 <li class="slider-buttons-list__item">
                     <button class="slider-buttons-list__button slider-buttons-list__button--prev" type="button"
                         data-slider-prevBtn>
-                        <svg width="56px" height="48px">
+                        <svg width="48px" height="40px">
                             <use href="./images/sprite.svg#icon-arrow-left"></use>
                         </svg>
                     </button>
@@ -21,7 +21,7 @@
                 <li class="slider-buttons-list__item">
                     <button class="slider-buttons-list__button slider-buttons-list__button--next" type="button"
                         data-slider-nextBtn>
-                        <svg width="56px" height="48px">
+                        <svg width="48px" height="40px">
                             <use href="./images/sprite.svg#icon-arrow-right"></use>
                         </svg>
                     </button>
@@ -59,47 +59,53 @@
             </ul>
         </div>
 
-        <div class="hero__picture">
-            <picture>
-                <source srcset="./images/big-apple-desktop.webp     1x,
+        <div class="hero__part2">
+            <div class="hero__picture">
+                <picture>
+                    <source srcset="./images/big-apple-desktop.webp     1x,
                                 ./images/big-apple-desktop@2x.webp 2x" media="(min-width: 1280px)">
-                <source srcset="./images/big-apple-tablet.webp    1x,
+                    <source srcset="./images/big-apple-tablet.webp    1x,
                                 ./images/big-apple-tablet@2x.webp     2x" media="(min-width: 768px)">
-                <source srcset="./images/big-apple-mobile.webp   1x, 
+                    <source srcset="./images/big-apple-mobile.webp   1x, 
                                 ./images/big-apple-mobile@2x.webp   2x" media="(min-width: 320px)">
-                <img src="./images/big-apple-mobile.webp" alt="Apple">
-            </picture>
-        </div>
-        <div class="hero-content2">
-            <h2 class="hero-content2__title">What’s Special About Our Offerings</h2>
-            <p class="hero-content2__description">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Suspendisse varius enim in eros elementum tristique.
-                Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-            <ul class="hero-content2-list">
-                <li class="hero-content2-list__item">
-                    <div class="hero-content2-list__icon">
-                        <svg width="32px" height="32px">
-                            <use href="./images/rocket-icon.svg"></use>
-                        </svg>
-                    </div>
-                    <h3 class="hero-content2-list__title">Fasest Delivery</h3>
-                    <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse varius enim in eros.</p>
-                </li>
-                <li class="hero-content2-list__item">
-                    <div class="hero-content2-list__icon">
-                        <svg width="32px" height="32px">
-                            <use href="./images/touch-icon.svg"></use>
-                        </svg>
-                    </div>
-                    <h3 class="hero-content2-list__title">Easy To Order</h3>
-                    <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse varius enim in eros.</p>
-                </li>
-            </ul>
-            <div class="hero-content2__btn-content">
-                <button class="hero-content2__button">Order Now</button>
-                <a class="hero-content2__link" href="#">Read More &gt;</a>
+                    <img src="./images/big-apple-mobile.webp" alt="Apple">
+                </picture>
+                <img class="hero__picture--dop hero__picture--dop--first" src="./images/big-apple-tablet-dop1.webp"
+                    alt="dop apple">
+                <img class="hero__picture--dop" src="./images/big-apple-tablet-dop2.webp" alt="dop apple">
+            </div>
+            <div class="hero-content2">
+                <h2 class="hero-content2__title">What’s Special About Our Offerings</h2>
+                <p class="hero-content2__description">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                </p>
+                <ul class="hero-content2-list">
+                    <li class="hero-content2-list__item">
+                        <div class="hero-content2-list__icon">
+                            <svg width="32px" height="32px">
+                                <use href="./images/rocket-icon.svg"></use>
+                            </svg>
+                        </div>
+                        <h3 class="hero-content2-list__title">Fasest Delivery</h3>
+                        <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Suspendisse varius enim in eros.</p>
+                    </li>
+                    <li class="hero-content2-list__item">
+                        <div class="hero-content2-list__icon">
+                            <svg width="32px" height="32px">
+                                <use href="./images/touch-icon.svg"></use>
+                            </svg>
+                        </div>
+                        <h3 class="hero-content2-list__title">Easy To Order</h3>
+                        <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Suspendisse varius enim in eros.</p>
+                    </li>
+                </ul>
+                <div class="hero-content2__btn-content">
+                    <button class="hero-content2__button">Order Now</button>
+                    <a class="hero-content2__link" href="#">Read More &gt;</a>
+                </div>
             </div>
         </div>
     </div>
