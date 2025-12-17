@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Kalam&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     
-    <script type="module" crossorigin src="/foodsta-team-project/assets/index-ed6e60d5.js"></script>
-    <link rel="stylesheet" href="/foodsta-team-project/assets/index-df9fca0c.css">
+    <script type="module" crossorigin src="/foodsta-team-project/assets/index-df352b7b.js"></script>
+    <link rel="stylesheet" href="/foodsta-team-project/assets/index-3fa615e8.css">
   </head>
   <body>
     <header class="header">
@@ -72,7 +72,7 @@
                 <li class="slider-buttons-list__item">
                     <button class="slider-buttons-list__button slider-buttons-list__button--prev" type="button"
                         data-slider-prevBtn>
-                        <svg width="56px" height="48px">
+                        <svg width="48px" height="40px">
                             <use href="/foodsta-team-project/assets/sprite-1d7c7c25.svg#icon-arrow-left"></use>
                         </svg>
                     </button>
@@ -80,7 +80,7 @@
                 <li class="slider-buttons-list__item">
                     <button class="slider-buttons-list__button slider-buttons-list__button--next" type="button"
                         data-slider-nextBtn>
-                        <svg width="56px" height="48px">
+                        <svg width="48px" height="40px">
                             <use href="/foodsta-team-project/assets/sprite-1d7c7c25.svg#icon-arrow-right"></use>
                         </svg>
                     </button>
@@ -112,44 +112,50 @@
             </ul>
         </div>
 
-        <div class="hero__picture">
-            <picture>
-                <source srcset="/foodsta-team-project/assets/big-apple-desktop-1a20fa1b.webp 1x, /foodsta-team-project/assets/big-apple-desktop@2x-8d608b32.webp 2x" media="(min-width: 1280px)">
-                <source srcset="/foodsta-team-project/assets/big-apple-tablet-92f8b046.webp 1x, /foodsta-team-project/assets/big-apple-tablet@2x-6d3062bd.webp 2x" media="(min-width: 768px)">
-                <source srcset="/foodsta-team-project/assets/big-apple-mobile-8605bb8b.webp 1x, /foodsta-team-project/assets/big-apple-mobile@2x-2af31e71.webp 2x" media="(min-width: 320px)">
-                <img src="/foodsta-team-project/assets/big-apple-mobile-8605bb8b.webp" alt="Apple">
-            </picture>
-        </div>
-        <div class="hero-content2">
-            <h2 class="hero-content2__title">What’s Special About Our Offerings</h2>
-            <p class="hero-content2__description">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Suspendisse varius enim in eros elementum tristique.
-                Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-            <ul class="hero-content2-list">
-                <li class="hero-content2-list__item">
-                    <div class="hero-content2-list__icon">
-                        <svg width="32px" height="32px">
-                            <use href="/foodsta-team-project/assets/rocket-icon-b5904141.svg"></use>
-                        </svg>
-                    </div>
-                    <h3 class="hero-content2-list__title">Fasest Delivery</h3>
-                    <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse varius enim in eros.</p>
-                </li>
-                <li class="hero-content2-list__item">
-                    <div class="hero-content2-list__icon">
-                        <svg width="32px" height="32px">
-                            <use href="/foodsta-team-project/assets/touch-icon-46c67c6e.svg"></use>
-                        </svg>
-                    </div>
-                    <h3 class="hero-content2-list__title">Easy To Order</h3>
-                    <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Suspendisse varius enim in eros.</p>
-                </li>
-            </ul>
-            <div class="hero-content2__btn-content">
-                <button class="hero-content2__button">Order Now</button>
-                <a class="hero-content2__link" href="#">Read More &gt;</a>
+        <div class="hero__part2">
+            <div class="hero__picture">
+                <picture>
+                    <source srcset="/foodsta-team-project/assets/big-apple-desktop-1a20fa1b.webp 1x, /foodsta-team-project/assets/big-apple-desktop@2x-8d608b32.webp 2x" media="(min-width: 1280px)">
+                    <source srcset="/foodsta-team-project/assets/big-apple-tablet-92f8b046.webp 1x, /foodsta-team-project/assets/big-apple-tablet@2x-6d3062bd.webp 2x" media="(min-width: 768px)">
+                    <source srcset="/foodsta-team-project/assets/big-apple-mobile-8605bb8b.webp 1x, /foodsta-team-project/assets/big-apple-mobile@2x-2af31e71.webp 2x" media="(min-width: 320px)">
+                    <img src="/foodsta-team-project/assets/big-apple-mobile-8605bb8b.webp" alt="Apple">
+                </picture>
+                <img class="hero__picture--dop hero__picture--dop--first" src="/foodsta-team-project/assets/big-apple-tablet-dop1-ac3c1988.webp"
+                    alt="dop apple">
+                <img class="hero__picture--dop" src="data:image/webp;base64,UklGRtQOAABXRUJQVlA4WAoAAAAQAAAAawAAhwAAQUxQSKwDAAABkG1r25tE7xdCSexi77rGXmLFoUMsQb73/m+IDKZ8/9kcRMQE4H/LMhOevn7+MHXSvWgAYpIA0rwbKufXv+uAmCNA+DRhpv06xBYB1jvM/gxiiAgWx8xR2YFYIYDfYr7KIcQIeBfKvJU9SLnqy2G4tLyycvvD/Ki8hJRqn4VW1lBmD/7ubfe7MORdqdKlsdUqykRSvAVIaWarF63el+bHJgBBI9pHqQUAas3rMam5HM3I0Zf6pZoz6DLXY4igTeWSDYLLHJTTCrBEKldtgKB+P51j8nZ19icaaQo/n+mhS7ILMwXe6slDqxWd7YSC1Mry4cNb56mGdlInqSJm5CqIqcp9OPKaZAwxRlI8AJIiKYIhyQ2YKgACPzhaQdh5wPHy/SDCrCAklWKDpFVwf3PFKckPJX84O+nfbYZYGZNcgYkCb9Nrvjx8xSSVWX6RyiOIAR7QnHLK/B+XAEBKJACwMaCygEp+je/3UFoBqmcrNyz26CQozWlCUotFcnS2JhApmKBNKsuZDOuAFEiAkKVuLQGQgngIRz9aKvLrrAJIIXCotPDOByQ3DzKhhUpeIXcPW0ojldMdwMtBgCYNVSZLyMNb+bBkdh+SGR5JtUV5CcmsTXOVJ5AsBFj8sYfKa0gGkGeqQVTeQTIIqTRZeQfvN4JlWq3cgvwCIdUqKmuYX9Ch5R+QeQQVNY1XkDkgnzRd2cC8Ia3vQf4h+LJOuY5/n9D+MSTFw6kDuIb0JaoDepCUPToxQOq1G+5nBBM3TEQA3NKRTQA1qiOeASzSlYkADXUFF4AFOvMUOHbHOyRxRyIYuEPrlYk7uOa5ZL9Gh/65ckl07JLWrku6dy7pXblk8OSUT5eMV10yaLqkveiS17o65N77ccg5Yofs4q9DVnDtkAa2HeKj4Y4JIN/OeAbw5ox9AEfOCAEEzhAA+HTEG2YjR6ynrDjCT/GnTnhHGp24kYZ9qn0x/t2j/XdzLDugPgfG5kWYd9O8xlz4Mi7C/JtUy5LgF4hp+QV+u0K1K8bv32l3M4OKWqU3yPKIalOMbIc0OQky8k3SU2S9SbXnHNnf0dwH5OgNrOn7ecAfqCl9H/lWB2pI30fe1YEdfR/5VyMrIh+FPLfhAkU9nZQvOURxg7hscYBC35brxkfBm3F54iZKeDEpR3Lho5RBVIbIR2mDqGhRgFIHUVyc5MJH+Q/axWif+rAxOGjn1T71Yam/c9POKGnfNH1YvLJz8dgexMlMEg/eHi8OQhQaVlA4IAILAADwLACdASpsAIgAPpE+mUkloyIhLDaq4LASCWQntugrOic3DwYYPEcnR0vNEeQ87eeT0NbbfzEftN6znpC86rqWPQA6Vb/D4It/GPO14h/mfxu85/07XwG/+zOXMDj5Ol576f+A9Mf/t//M/rXvJd7/669gb+X/2DrG+h/+vjUh91EHowsPa+D4+YyZYGogWmIn3PgsTu4F0Gx3aej7YCy9eSVHFQq5Ik1GmvQmFXvfAi1P7lzbSDYqfNf8r43pQ9P1NigUTqKOkIMxn4E56qRYo5z2muK3PxylCHs6wUYAhLCxnxhxUpt4GXS/dzZ45qTRl91uERuCy9oi3lvtZ+gAza5vWtNRDgQ1Qkvy+Chqf4PoKtUGPCgjzYfHTUUf6fQqkzeiTcohph5I2uM8yuqxIe8BsPugZq706nf/95HWhmwlRn2Q82crtQuKr7ojJZXpyl8D1ipMYOctZ3Yj/rAadKGBN8b1TkqWdrX2PWhs0AD+/TZrVdY8PX61nRoAl09m/bHmUX1alNs1oYXdPu8omV3HipnHB8kj7HtcwWWumM9Kqs2Pd6/wsCVtvBEVgpPNeC+DjLcRYvYXn8DMH8kVND2UPe0gSPxK05OZMuvHew1csXA5EX1e2kIRq6RjOT/vv77sbBWzicLB8j4KVYSozA5EUL/5QvxYFe9Ci5tf4BHXNe17UPYbg6d3srSqcoy1Gm+PcasLeBltsoQ2BZVtp6mOe4OA8a8riNrPqUYEPP58JonuaTySeUEg7VrOnZmGa+Kbeu7FkprekudGjQaU872aUWSlU1bTJmUqBraImjKe/P0i57QA6VsIHJvC09iYthYQ9vajCgrKeWyng6Ced5qVuPwqcPEFd5IPQF/nBCtIzxnp9n01SMIn1H6GRRWvTJPj9xI+tfRh1O587cNFaPVMQ8AoAx85HTXr+OlvdpvZcyTT/CgKJUzhiu5qB2tla01itaOVjiWk3U4M6Cqhvqhk4TUTkYNJKLAfC4Wo7EBvD++laSMpoOzLzzMYduTRsjQjr7fhw5CJpSVY8ZWa/nAfLlwFoEz7oZ53b0ot337XeuJfvCDA+Ip3X3LG1Y+kX/7SRwO363TsZs8eGQynS+K15akZc/vmhxs9tPkylCYVzrS3KaPuJOFssvcn4Eycr/14d8370lCwvKCBZ5XjcHlcOkqfjqyFpnqm2GBIq2oNrF6p/1xKCdZyfN05j3ipZpAvahObSnFYsd4Qj5DiDkO63uwZ3VFhnJfvYgcayh7fVmnZdCcEVjJAb1N7GkRZDT8R4ReCWfB0MR0qZHEaboBjJM6GKnRiAmnHFbG8FvzcAM04yw4rrpY/2/vlmnmre6aWxgNQQWs8WQ3xUcEF8n82b796U0CXRC9gSlBrMLXHUABZYPzrK9YUK9nf8Ji/e3MqoDwec0vDvvzh3Rr+cq0nSr9G8qU/T5iZflcAP0edObLylhUqz520DIdSi3m99OdZUgknAWh4dOawkefwsNZfn7sdOAF+bNqb6oTRhgNpaVXMxcFOZjqesrQq/RFUbAWYLZB4vo4EH94xUxfJTh/YmIlUNJEL96gkZPlbvjehznEv44nWr06GonTEiGlkaEwmq42Y1andROxJJaqtfp3f/wxACPjvGlW1J7VYrx4XSPHRVhZX+T9ugdW8n3uCbFBHf53fWS0yBPydKlRLXE4g0ThkGOgaQT5Njx5NWfxotyORYs1sOSwG2UCQaMP3mXkoihvOj204S0+8oSy7LbEA51qXI40TcOwd7VIuCyyjh6Zt+zJTqhIL9R3R/J+TJODUKnqJQOKz825AZ+tsxqKyBFgnWxNccvW8iZmLgGyBteJlHZNsZFm4+Ff9KyxzDnlAlfBcPNHbTX2P+Q+MDpQIrVyblMAULkrsm86CKiW7g+VWkoqftJPXtPHVUglPmjwssllxKQUV0PJDsAf9LprnVjlKKbNNLyn0UX8/Do565alzcQQveYUjCbNvL1JVgt+EH7ykiVWQ9d2jTjfaCQ4Wmcf9/mFwuf02nOPccNhX83fdQVJJDEUQ4DI3lXSPeIGLD3/CcSJ/7jPf1cmygOaW6yHq4Gr2l0MvbC1P8Pg1NFU9PJgz9RutZzaSMjM2h5QnKyktpqkwE1VqXfB5NZRnHtn7MEOCouaiOIrI9k42eLSHKNLnXW9GVXtUx0zj9rXfvhIUEBJe1yUhwb9P84EH86codrWxS1QM6533jYOOxIcjGBxDJOKgAFA/g2Kyc7cWQlqqMP+j0BllJ9wfYJoH7jFpVrdfPaMvrIDzh1n8gRBjRuGHNLMK4p5UZ2fSxH8WrjKXqc6XbP/By0BRv+UwKogiTOIryjzKdOdGljxSNoEFpLM+f1bAsixEk+7VpQfp0Dye+U3i0uy+oZoPI2fG19TjQGrn3hNy2XR8tgQCptGVpmKUypuuuznR2jPVQz/4wUmPgoDq+SxxxCCHbzT8c0cBF3U537ckxvdn1fkSV2UQjVgR4eYzte2NJN8xMKmWhd6ugH8zY69im/yZ+qrsnYJb+4IvrwoXnu43ECN35V6FiZhcR/KY0yKlxShiN5szUcseuBBjdqCoP1w+Z98lOZTpsFn/LmsgtrmGxUOsqFmrFa3Owl/3C2tmK+SoxwkQk2Kv6lMfeDw8xB1HOg4X6y8dDGA97sz08c7WvjGXkRRgSG+0ceVJWM6DYQt4dKSsIV8NfBmox8JwEsnzJ+LuIOIzxZ/jveOptmD0Fym/KajdbG+X1OcRs8kS4XPzP9ERYDrckyXl9YqOZ4HU7j9mfnqX/cSYieUy1P4q4eVJmYZQJcxW1SBv/iU3PHfPXkMvBFsENwH2YvqvTjMuEigGUQssX6Ij5CNPP9mtibzBg2o5plPtnpjEf87YotDu1LkY0kUgmh9+TEZn3kkWys76UO/mxuoOWXNvZVy7p6dRHsRh9owoONllcclE4LeiFtb81jVEFpeCLCKWMro5mFNJ2tGNoKhHorsTU4K7icMr17+4Q6nvaFFGF2AW2QEDWYHcuWVThqSwJjbWD5IOvl5ez4tSy6jG1AZEbDjuHfTosjG+UFFaRusG5kpaVVoOvGeTyhLMQ9nfzZMsXFfNXTb3sdomYhlIGWAu8XbSL2DKZn9m9kL8SnplFhk8lF2pbkhhi92mkkud5Dlr1UWbM8kyiYn9siFjV65h+pX7P22nJHIK3paHFIA9opt6QYnSpWH4gfciAdrbYLpo5zS+k4Wv0YAMoeVcMOZjwVTa4mdKm9fb7X//XxniT38h7dUBsOnFsewlJJKjQYDS0/NVP5d2e1Xif3a5Zilnh0wtOaNucDW2USfJF9MTX5N7Yz0AQZwGQ6lPMRZdUBnJ2A8dyoVm/hhFVkQlyCBXK1WJjcjpyb3EE+6LYbHuIx+CBBv8cviFocPxgO7H93SYkwmhLjykSrPloVJPQjGLNFX5ymxy3d9GISs0G6oEDUikEBu+0L33UaAIARWRbL6ssTx+4xnk63uUT4jaI1NeVI17h3wQ64p9yFjcwMcsws8wvdzmZKoaWYV8mgPTfBUDBT+43QWIRfsrDxizoX3MA186p6SuP/z4f/Mfn//YF9UrA2uZoICMFUAAcnhj2W00BVUIkQk3b7uL+NsyZ1jrvLt3yvi7fj9/+DHSChE9nixr4NwRY5hqYk2cBQp/YeoWE23NSZXsD/Xytuw8DrQxPTPdQqE2qJShKoPxvq5tS1uhc//hy11YwL/E7c370xC305/8B3//s4IbXc9hMlyIVipeAAAA" alt="dop apple">
+            </div>
+            <div class="hero-content2">
+                <h2 class="hero-content2__title">What’s Special About Our Offerings</h2>
+                <p class="hero-content2__description">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                </p>
+                <ul class="hero-content2-list">
+                    <li class="hero-content2-list__item">
+                        <div class="hero-content2-list__icon">
+                            <svg width="32px" height="32px">
+                                <use href="/foodsta-team-project/assets/rocket-icon-b5904141.svg"></use>
+                            </svg>
+                        </div>
+                        <h3 class="hero-content2-list__title">Fasest Delivery</h3>
+                        <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Suspendisse varius enim in eros.</p>
+                    </li>
+                    <li class="hero-content2-list__item">
+                        <div class="hero-content2-list__icon">
+                            <svg width="32px" height="32px">
+                                <use href="/foodsta-team-project/assets/touch-icon-46c67c6e.svg"></use>
+                            </svg>
+                        </div>
+                        <h3 class="hero-content2-list__title">Easy To Order</h3>
+                        <p class="hero-content2-list__description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Suspendisse varius enim in eros.</p>
+                    </li>
+                </ul>
+                <div class="hero-content2__btn-content">
+                    <button class="hero-content2__button">Order Now</button>
+                    <a class="hero-content2__link" href="#">Read More &gt;</a>
+                </div>
             </div>
         </div>
     </div>
