@@ -1,9 +1,11 @@
 .header {
+    position: relative;
+    padding-top: 10px;
     margin-bottom: 60px;
     box-shadow: 0 4px 24px 0 rgba(105, 105, 105, 0.1);
 
     .container {
-        display: flex; 
+        display: flex;
         justify-content: space-between;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
@@ -33,6 +35,12 @@
 
         &__link {
             color: #000;
+            @include multi-transition((color, text-decoration));
+
+            &:hover {
+                color: get-var(light__button-green);
+                text-decoration: underline;
+            }
         }
     }
 
@@ -44,8 +52,156 @@
         }
     }
 
+    .backdrop {
+        position: fixed;
+        z-index: 99999999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(94, 99, 99, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
+        @include multi-transition((opacity, visibility));
+    }
+
+    .is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .backdrop.is-hidden .modal {
+        transform: scale(0);
+    }
+
+    .modal {
+        position: relative;
+        z-index: 99999999;
+        width: 100%;
+        height: 449px;
+        border-radius: 30px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+        background-color: get-var(main__yellow1);
+        padding: 32px 20px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            padding: 32px;
+            width: 458px;
+        }
+
+        &__close {
+            cursor: pointer;
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &__main-content-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__label {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+
+            .input {
+                border: 1px solid get-var(dark__green1);
+                border-radius: 30px;
+                width: 280px;
+                height: 48px;
+                box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+                background: #fff;
+                font-size: 16px;
+                line-height: 125%;
+                color: #c4c4c4;
+
+                @media screen and (min-width: getBreakPoint(tablet)) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__submit {
+            @include button(106px, 40px, $brs: 2px, $brh: #597d00);
+            margin: 0 auto;
+        }
+    }
+
     .burger {
-        display: none;
+        position: absolute;
+        left: 165px;
+        top: 40px;
+        border-radius: 30px 0 30px 30px;
+        width: 130px;
+        height: 255px;
+        box-shadow: 0 4px 24px 0 rgba(105, 105, 105, 0.1);
+        background-color: white;
+
+        .burger-close {
+            position: absolute;
+            left: 95px;
+            top: 5px;
+        }
+
+        .bnav-list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &__item {
+                width: 100%;
+                height: 51px;
+                padding: 16px 10px 16px 16px;
+
+                &:nth-child(1) {
+                    border-radius: 30px 0 0 0;
+                }
+
+                &:last-child {
+                    border-radius: 0 0 30px 30px;
+                }
+
+                &:hover {
+                    background-color: get-var(light__button-green);
+                }
+            }
+
+            &__link {
+                font-size: 16px;
+                color: #000;
+            }
+        }
     }
 
     .burger-open {
@@ -55,4 +211,12 @@
             display: none;
         }
     }
+}
+
+.displaynone {
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
