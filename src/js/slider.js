@@ -9,16 +9,20 @@ export default class ResponsiveSlider {
     this.btnNext = this.slider.querySelector('[data-slider-nextBtn]');
 
     this.currentIndex = 0;
-    
+
     this.init();
   }
 
   init() {
+    this.items.forEach(item => {
+      item.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+    });
+
     const resizeObserver = new ResizeObserver(() => {
       this.updateMetrics();
       this.goToSlide(this.currentIndex, false);
     });
-    
+
     resizeObserver.observe(this.slider);
 
     this.addEventListeners();
@@ -35,6 +39,7 @@ export default class ResponsiveSlider {
     const stepWidth = this.itemWidth + this.gap;
     const visibleItems = Math.floor((containerWidth + this.gap) / stepWidth);
     this.maxIndex = Math.max(0, this.items.length - (visibleItems || 1));
+    
     if (this.currentIndex > this.maxIndex) {
       this.currentIndex = this.maxIndex;
     }
@@ -49,6 +54,17 @@ export default class ResponsiveSlider {
 
     this.sliderList.style.transition = animate ? 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none';
     this.sliderList.style.transform = `translateX(${translateX}px)`;
+    if (animate) {
+      const activeSlide = this.items[this.currentIndex];
+      activeSlide.style.transition = 'none';
+      activeSlide.style.transform = 'scale(0.8)';
+      activeSlide.style.opacity = '0';
+      requestAnimationFrame(() => {
+        activeSlide.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+        activeSlide.style.transform = 'scale(1)';
+        activeSlide.style.opacity = '1';
+      });
+    }
 
     this.updateNavigationButtons();
   }
@@ -65,13 +81,13 @@ export default class ResponsiveSlider {
     if (this.btnPrev) {
       this.btnPrev.disabled = isAtStart;
       this.btnPrev.style.opacity = isAtStart ? '0.3' : '1';
-      this.btnPrev.style.cursor = isAtStart ? 'default' : 'pointer';
+      this.btnPrev.style.cursor = isAtStart ? 'not-allowed' : 'pointer';
     }
 
     if (this.btnNext) {
       this.btnNext.disabled = isAtEnd;
       this.btnNext.style.opacity = isAtEnd ? '0.3' : '1';
-      this.btnNext.style.cursor = isAtEnd ? 'default' : 'pointer';
+      this.btnNext.style.cursor = isAtEnd ? 'not-allowed' : 'pointer';
     }
   }
 }
