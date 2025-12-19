@@ -1,5 +1,6 @@
 .reviews {
   position: relative;
+  z-index: 1;
   width: 320px;
   padding: 80px 0 103px;
   background-image: url(../images/reviews-background-mob.webp);
@@ -9,6 +10,7 @@
 
 
   @media screen and (min-width: getBreakPoint(tablet)) {
+    z-index: 1;
     padding: 80px 0 120px;
     background-image: url(../images/reviews-background-tab.webp);
     width: 768px;
@@ -18,8 +20,8 @@
     padding: 100px 0 200px;
     background-image: url(../images/reviews-background-des.webp);
     position: relative;
-    z-index: 2;
     width: 1280px;
+     z-index: 2;
   }
 
   &__header {
