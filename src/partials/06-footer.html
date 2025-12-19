@@ -4,13 +4,12 @@
         <!-- TOP -->
         <div class="footer__top">
 
-            <!-- BRAND -->
-            <div class="footer__brand">
-                <a href="/" class="footer__logo">
-                    <img src="" srcset="
-              1x,
-              2x
-            " alt="FoodSta logo" loading="lazy" width="106" height="28" />
+            <!-- logo -->
+            <div class="logo">
+                <a class="logo__link" href="#">
+                    <svg class="logo__svg" width="66" height="52">
+                        <use href="./images/logo.svg"></use>
+                    </svg>
                 </a>
             </div>
 
@@ -39,11 +38,9 @@
             <div class="footer__subscribe">
 
                 <p class="footer__subscribe-title">Subscribe</p>
-
+                <p class="visually-hidden">Email address</p>
                 <form class="footer__form" action="#" method="post">
-
                     <label class="footer__field">
-                        <span class="visually-hidden">Email address</span>
                         <input class="footer__input" type="email" name="email" placeholder="Enter your email"
                             required />
                     </label>
