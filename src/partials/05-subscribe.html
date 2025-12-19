@@ -29,14 +29,21 @@
         </div>
 
         <!-- IMAGE -->
-        <div class="subscribe__media">
+        <picture class="subscribe__media">
+            <!-- Desktop -->
+            <source media="(min-width: 1280px)" srcset="
+      ./images/banan-desktop.webp
+    " type="image/webp" />
 
-            <img class="subscribe__image" src="" srcset="
-          1x,
-          2x
-        " alt="Decorative banana" loading="lazy" width="400" height="300" />
+            <!-- Tablet -->
+            <source media="(min-width: 768px)" srcset="
+      ./images/banan-tablet.webp
+    " type="image/webp" />
 
-        </div>
+            <!-- Mobile (fallback) -->
+            <img class="subscribe__image" src="./images/banan-mobile.webp" srcset=""
+                alt="Decorative banana" loading="lazy" width="400" height="300" />
+        </picture>
 
     </div>
 </section>
