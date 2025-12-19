@@ -1,0 +1,72 @@
+.loader-plate {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+
+    /* тарілка */
+    background:
+        radial-gradient(circle at 50% 45%, rgba(255, 255, 255, .10) 0 34%, transparent 35% 100%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .10) 0 44%, transparent 45% 100%);
+    outline: 2px solid rgba(255, 255, 255, .20);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15) inset;
+}
+
+/* “пара” як дуга, що їде по колу */
+.loader-plate__steam {
+    position: absolute;
+    inset: 14px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: rgba(255, 255, 255, .85);
+    filter: blur(.2px);
+    animation: plateSpin 1.05s linear infinite;
+}
+
+.loader-plate__steam--2 {
+    inset: 20px;
+    border-top-color: rgba(255, 255, 255, .65);
+    animation-duration: 1.35s;
+}
+
+.loader-plate__steam--3 {
+    inset: 26px;
+    border-top-color: rgba(255, 255, 255, .45);
+    animation-duration: 1.7s;
+}
+
+@keyframes plateSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* якщо людина вимкнула анімації */
+@media (prefers-reduced-motion: reduce) {
+    .loader-plate__steam {
+        animation: none;
+    }
+}
+
+.preloader{
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity .35s ease,
+    visibility .35s ease;
+}
+
+.preloader.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

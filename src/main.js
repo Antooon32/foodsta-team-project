@@ -13,3 +13,32 @@ if (document.readyState === 'loading') {
 } else {
     initSlider();
 }
+
+(() => {
+    const preloader = document.querySelector('[data-preloader]');
+    if (!preloader) return;
+
+    const MIN_VISIBLE_TIME = 600;
+    const startTime = Date.now();
+
+    function hidePreloader() {
+        const elapsed = Date.now() - startTime;
+        const delay = Math.max(MIN_VISIBLE_TIME - elapsed, 0);
+
+        setTimeout(() => {
+            preloader.classList.add('is-hidden');
+
+            preloader.addEventListener(
+                'transitionend',
+                () => preloader.remove(),
+                { once: true }
+            );
+        }, delay);
+    }
+
+    if (document.readyState === 'complete') {
+        hidePreloader();
+    } else {
+        window.addEventListener('load', hidePreloader, { once: true });
+    }
+})();
