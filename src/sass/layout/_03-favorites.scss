@@ -48,6 +48,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @include multi-transition(background-image);
+
+            &:hover {
+                background-image: url(../images/favorite-ring2.svg);
+            }
 
             @media screen and (min-width: getBreakPoint(tablet)) {
                 width: 336px;
