@@ -20,10 +20,15 @@
 
     &__description {
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 68px;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             font-size: 16px;
+            margin-bottom: 67px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            margin-bottom: 47px;
         }
     }
 
