@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Kalam&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     
-    <script type="module" crossorigin src="/foodsta-team-project/assets/index-df352b7b.js"></script>
-    <link rel="stylesheet" href="/foodsta-team-project/assets/index-3fa615e8.css">
+    <script type="module" crossorigin src="/foodsta-team-project/assets/index-8aa9128e.js"></script>
+    <link rel="stylesheet" href="/foodsta-team-project/assets/index-1c2a22d5.css">
   </head>
   <body>
     <header class="header">
@@ -38,14 +38,45 @@
                 <li class="nav-list__item"><a class="nav-list__link" href="#">Contact</a></li>
             </ul>
         </nav>
-        <button class="modal-open">Order Now</button>
-        <button class="burger-open">
+        <button class="modal-open" data-modal-open>Order Now</button>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="modal__close" data-modal-close>
+                    <svg width="24" height="24">
+                        <use href="/foodsta-team-project/assets/sprite-1d7c7c25.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <h3 class="modal__title">Order Form</h3>
+                <form class="modal-form" modal-form>
+                    <div class="modal__main-content-form">
+                        <label class="modal__label">
+                            &emsp;Name
+                            <input class="input" type="text" name="name" placeholder="&ensp;Your name" required>
+                        </label>
+                        <label class="modal__label">
+                            &emsp;Phone number
+                            <input class="input" type="tel" name="tel" placeholder="&ensp;+38(0_ _) _ _ _   _ _   _ _" required>
+                        </label>
+                        <label class="modal__label">
+                            &emsp;E-mail
+                            <input class="input" type="email" name="email" placeholder="&ensp;example@gmail.com" required>
+                        </label>
+                    </div>
+                    <button class="modal__submit" type="submit" modal-submit>Send</button>
+                </form>
+            </div>
+        </div>
+        <button class="burger-open" data-burger-open>
             <svg class="burger-open__svg" width="24" height="24">
                 <use href="/foodsta-team-project/assets/sprite-1d7c7c25.svg#icon-burger"></use>
             </svg>
         </button>
-        <div class="burger">
-            <button class="burger-close"></button>
+        <div class="burger displaynone" data-burger>
+            <button class="burger-close" data-burger-close>
+                <svg width="24" height="24">
+                    <use href="/foodsta-team-project/assets/sprite-1d7c7c25.svg#icon-close"></use>
+                </svg>
+            </button>
             <ul class="bnav-list">
                 <li class="bnav-list__item"><a class="bnav-list__link" href="#">Home</a></li>
                 <li class="bnav-list__item"><a class="bnav-list__link" href="#">About</a></li>
@@ -65,7 +96,7 @@
                 adipiscing elit. Suspendisse varius enim in eros elementum
                 tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
                 erat.</p>
-            <button class="hero-content__button">Order Now</button>
+            <button class="hero-content__button" data-modal-open>Order Now</button>
         </div>
         <div class="slider">
             <ul class="slider-buttons-list">
@@ -153,7 +184,7 @@
                     </li>
                 </ul>
                 <div class="hero-content2__btn-content">
-                    <button class="hero-content2__button">Order Now</button>
+                    <button class="hero-content2__button" data-modal-open>Order Now</button>
                     <a class="hero-content2__link" href="#">Read More &gt;</a>
                 </div>
             </div>
