@@ -1,7 +1,8 @@
 .subscribe {
     position: relative;
-    padding: 60px 0 60px;
+    padding: 0 0 20px;
     background-color: #ffffff;
+    z-index: 1;
 
     @media screen and (min-width: getBreakPoint(tablet)) {
         padding: 80px 0;
@@ -16,8 +17,7 @@
 
     &__container {
         display: flex;
-        flex-direction: column;
-        gap: 40px;
+        flex-direction: column-reverse;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             gap: 48px;
@@ -31,7 +31,7 @@
     }
 
     &__content {
-        max-width: 600px;
+        max-width: 656px;
     }
 
     &__title {
@@ -42,19 +42,17 @@
         color: #2c2c2c;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
-            font-size: 32px;
-        }
-
-        @media screen and (min-width: getBreakPoint(desktop)) {
             font-size: 42px;
-            line-height: 1.17;
+            line-height: 120%;
         }
     }
 
     &__text {
-        margin: 0 0 32px;
+        padding-bottom: 15px;
+        font-family: get-var(family__font-family);
+        font-weight: 400;
         font-size: 14px;
-        line-height: 1.29;
+        padding-bottom: 15px;
         color: #2c2c2c;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
@@ -67,8 +65,10 @@
     /* IMAGE */
     &__media {
         position: relative;
+        top: -40px;
         width: 100%;
         max-width: 420px;
+
 
         @media screen and (min-width: getBreakPoint(desktop)) {
             max-width: 608px;
@@ -88,36 +88,41 @@
 }
 
 .subscribe {
-  &__media {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    &__media {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
 
-    @media screen and (min-width: getBreakPoint(tablet)) {
-      width: 420px;
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            position: absolute;
+            top: -72px;
+            z-index: 2;
+            right: 28px;
+            width: 281px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            width: 570px;
+            top: 0;
+        }
     }
 
-    @media screen and (min-width: getBreakPoint(desktop)) {
-      width: 570px;
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+
+        /* mobile */
+        max-width: 280px;
+        margin: 0 auto;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            max-width: 360px;
+            margin: 0;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            max-width: 608px;
+        }
     }
-  }
-
-  &__image {
-    display: block;
-    width: 100%;
-    height: auto;
-
-    /* mobile */
-    max-width: 280px;
-    margin: 0 auto;
-
-    @media screen and (min-width: getBreakPoint(tablet)) {
-      max-width: 360px;
-      margin: 0;
-    }
-
-    @media screen and (min-width: getBreakPoint(desktop)) {
-      max-width: 608px;
-    }
-  }
 }
