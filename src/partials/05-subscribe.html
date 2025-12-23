@@ -9,22 +9,22 @@
             </h2>
 
             <p class="subscribe__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim 
-in eros elementum tristique.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+                in eros elementum tristique.
             </p>
 
             <!-- FORM -->
-            <form class="subscribe__form" action="#" method="post">
-
+            <form class="subscribe__form" action="#" method="post" novalidate>
                 <label class="subscribe__field">
                     <input class="subscribe__input" type="email" name="email" placeholder="Enter your email" required />
+                    <p class="subscribe__error"></p>
                 </label>
 
                 <button class="subscribe__button" type="submit">
                     Subscribe
                 </button>
-
             </form>
+
         </div>
 
         <!-- IMAGE -->
@@ -40,8 +40,8 @@ in eros elementum tristique.
     " type="image/webp" />
 
             <!-- Mobile (fallback) -->
-            <img class="subscribe__image" src="./images/banan-mobile.webp" srcset=""
-                alt="Decorative banana" loading="lazy" width="400" height="300" />
+            <img class="subscribe__image" src="./images/banan-mobile.webp" srcset="" alt="Decorative banana"
+                loading="lazy" width="400" height="300" />
         </picture>
 
     </div>
