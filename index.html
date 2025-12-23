@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Kalam&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     
-    <script type="module" crossorigin src="/foodsta-team-project/assets/index-be4ebef1.js"></script>
-    <link rel="stylesheet" href="/foodsta-team-project/assets/index-8638c7c3.css">
+    <script type="module" crossorigin src="/foodsta-team-project/assets/index-e947d8c1.js"></script>
+    <link rel="stylesheet" href="/foodsta-team-project/assets/index-a850a49b.css">
   </head>
   <body>
 <div class="preloader" data-preloader>
@@ -28,7 +28,7 @@
   </div>
 </div>
 
-    <header class="header">
+    <header class="header" id="header">
     <div class="container">
         <div class="logo">
             <a class="logo__link" href="#">
@@ -39,11 +39,11 @@
         </div>
         <nav class="nav">
             <ul class="nav-list">
-                <li class="nav-list__item"><a class="nav-list__link" href="#">Home</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="#">About</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="#">Service</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="#">Menu</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="#">Contact</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#header">Home</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#hero">About</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#reviews">Service</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#favorites">Menu</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#footer">Contact</a></li>
             </ul>
         </nav>
         <button class="modal-open" data-modal-open>Order Now</button>
@@ -60,14 +60,17 @@
                         <label class="modal__label">
                             &emsp;Name
                             <input class="input" type="text" name="name" placeholder="&ensp;Your name" required>
+                            <p class="form-error"></p>
                         </label>
                         <label class="modal__label">
                             &emsp;Phone number
                             <input class="input" type="tel" name="tel" placeholder="&ensp;+38(0_ _) _ _ _   _ _   _ _" required>
+                            <p class="form-error"></p>
                         </label>
                         <label class="modal__label">
                             &emsp;E-mail
                             <input class="input" type="email" name="email" placeholder="&ensp;example@gmail.com" required>
+                            <p class="form-error"></p>
                         </label>
                     </div>
                     <button class="modal__submit" type="submit" modal-submit>Send</button>
@@ -86,17 +89,17 @@
                 </svg>
             </button>
             <ul class="bnav-list">
-                <li class="bnav-list__item"><a class="bnav-list__link" href="#">Home</a></li>
-                <li class="bnav-list__item"><a class="bnav-list__link" href="#">About</a></li>
-                <li class="bnav-list__item"><a class="bnav-list__link" href="#">Service</a></li>
-                <li class="bnav-list__item"><a class="bnav-list__link" href="#">Menu</a></li>
-                <li class="bnav-list__item"><a class="bnav-list__link" href="#">Contact</a></li>
+                <li class="bnav-list__item"><a class="bnav-list__link" href="#header">Home</a></li>
+                <li class="bnav-list__item"><a class="bnav-list__link" href="#hero">About</a></li>
+                <li class="bnav-list__item"><a class="bnav-list__link" href="#reviews">Service</a></li>
+                <li class="bnav-list__item"><a class="bnav-list__link" href="#favorites">Menu</a></li>
+                <li class="bnav-list__item"><a class="bnav-list__link" href="#footer">Contact</a></li>
             </ul>
         </div>
     </div>
 </header>
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
     <div class="container">
         <div class="hero-content">
             <h1 class="hero-content__title">Enjoy Your Favorite Food From Anywhere</h1>
@@ -199,7 +202,7 @@
         </div>
     </div>
 </section>
-      <section class="favorites">
+      <section class="favorites" id="favorites">
     <div class="container">
         <h2 class="favorites__title">
             Some of Our Favorites
@@ -260,7 +263,7 @@
         </ul>
     </div>
 </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
   <div class="reviews__container container">
 
     <!-- HEADER -->
@@ -346,22 +349,22 @@
             </h2>
 
             <p class="subscribe__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim 
-in eros elementum tristique.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+                in eros elementum tristique.
             </p>
 
             <!-- FORM -->
-            <form class="subscribe__form" action="#" method="post">
-
+            <form class="subscribe__form" action="#" method="post" novalidate>
                 <label class="subscribe__field">
                     <input class="subscribe__input" type="email" name="email" placeholder="Enter your email" required />
+                    <p class="subscribe__error"></p>
                 </label>
 
                 <button class="subscribe__button" type="submit">
                     Subscribe
                 </button>
-
             </form>
+
         </div>
 
         <!-- IMAGE -->
@@ -373,14 +376,14 @@ in eros elementum tristique.
             <source media="(min-width: 768px)" srcset="/foodsta-team-project/assets/banan-tablet-e23330e5.webp " type="image/webp" />
 
             <!-- Mobile (fallback) -->
-            <img class="subscribe__image" src="data:image/webp;base64,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" srcset=""
-                alt="Decorative banana" loading="lazy" width="400" height="300" />
+            <img class="subscribe__image" src="data:image/webp;base64,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" srcset="" alt="Decorative banana"
+                loading="lazy" width="400" height="300" />
         </picture>
 
     </div>
 </section>
     </main>
-    <section class="footer">
+    <section class="footer" id="footer">
     <div class="footer__container container">
 
         <!-- TOP -->
@@ -420,16 +423,16 @@ in eros elementum tristique.
             <div class="footer__subscribe">
 
                 <p class="footer__subscribe-title">Subscribe</p>
-                <form class="footer__form" action="#" method="post">
+                <form class="footer__form" action="#" method="post" novalidate>
                     <label class="footer__field">
                         <input class="footer__input" type="email" name="email" placeholder="Enter your email"
                             required />
+                        <p class="footer__error"></p>
                     </label>
 
                     <button class="footer__button" type="submit">
                         Subscribe
                     </button>
-
                 </form>
 
                 <p class="footer__policy-text">
