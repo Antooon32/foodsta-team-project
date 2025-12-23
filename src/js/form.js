@@ -1,5 +1,5 @@
 // =======================
-// EMAIL VALIDATION (UNIVERSAL)
+// EMAIL VALIDATION (BUTTON STATES)
 // =======================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,24 +9,44 @@ document.addEventListener('DOMContentLoaded', () => {
     formSelector,
     inputSelector,
     errorSelector,
+    buttonSelector,
     errorFontSize = '12px',
+    successBg = '#4CAF50',
+    errorBg = '#ff6b6b',
+    defaultBg = '',
   }) {
     const form = document.querySelector(formSelector);
     if (!form) return;
 
     const input = form.querySelector(inputSelector);
     const errorText = form.querySelector(errorSelector);
+    const button = form.querySelector(buttonSelector);
 
-    if (!input || !errorText) return;
+    if (!input || !errorText || !button) return;
 
-    function showError(message) {
+    // ---- initial state ----
+    button.disabled = true;
+    button.style.backgroundColor = defaultBg;
+
+    function setErrorState(message) {
       errorText.textContent = message;
-      errorText.style.color = '#ff6b6b';
+      errorText.style.color = errorBg;
       errorText.style.fontSize = errorFontSize;
+
+      button.disabled = true;
+      button.style.backgroundColor = errorBg;
     }
 
-    function clearError() {
+    function setSuccessState() {
       errorText.textContent = '';
+      button.disabled = false;
+      button.style.backgroundColor = successBg;
+    }
+
+    function setDefaultState() {
+      errorText.textContent = '';
+      button.disabled = true;
+      button.style.backgroundColor = defaultBg;
     }
 
     // -------- live validation --------
@@ -34,14 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const value = input.value.trim();
 
       if (value === '') {
-        clearError();
+        setDefaultState();
         return;
       }
 
       if (!emailRegex.test(value)) {
-        showError('Not a valid email address (example@email.com)');
+        setErrorState('Not a valid email address (example@email.com)');
       } else {
-        clearError();
+        setSuccessState();
       }
     });
 
@@ -51,26 +71,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!emailRegex.test(value)) {
         e.preventDefault();
-        showError('Not a valid email address (example@email.com)');
+        setErrorState('Not a valid email address (example@email.com)');
       }
     });
   }
 
   // =======================
-  // INIT FORMS
+  // INIT
   // =======================
 
   initEmailValidation({
     formSelector: '.footer__form',
     inputSelector: '.footer__input',
     errorSelector: '.footer__error',
-    errorFontSize: '12px',
+    buttonSelector: '.footer__button',
   });
 
   initEmailValidation({
     formSelector: '.subscribe__form',
     inputSelector: '.subscribe__input',
     errorSelector: '.subscribe__error',
-    errorFontSize: '12px',
+    buttonSelector: '.subscribe__button',
   });
 });
