@@ -189,3 +189,51 @@
   min-height: 20px;
   line-height: 1.2;
 }
+
+.footer {
+  &__button {
+    // вже є ↑
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    &.is-error {
+      background-color: #ff705d;
+      border-color: #ff705d;
+      color: #fff;
+      cursor: not-allowed;
+    }
+
+    &.is-success {
+      background-color: #7eb101;
+      border-color: #7eb101;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+.subscribe {
+  &__button {
+    // вже є ↑
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    &.is-error {
+      background-color: #ff705d;
+      color: #fff;
+      cursor: not-allowed;
+    }
+
+    &.is-success {
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
