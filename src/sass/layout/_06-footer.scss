@@ -4,19 +4,15 @@
     background-image: url(../images/footer-mob@2x.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 320px;
-    margin: auto;
 
     @media screen and (min-width: getBreakPoint(tablet)) {
         padding: 80px 0;
-        background-image: url(../images/footer-tab@2x.jpg);
-        width: 768px;
+        background-image: url(../images/footer-tab@2x.jpg);     
     }
 
     @media screen and (min-width: getBreakPoint(desktop)) {
         padding: 100px 0;
         background-image: url(../images/footer@2x.jpg);
-        width: 1280px;
     }
 
     &__top {

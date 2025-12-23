@@ -6,11 +6,10 @@
 
     @media screen and (min-width: getBreakPoint(tablet)) {
         padding: 80px 0;
-    }
+        }
 
     @media screen and (min-width: getBreakPoint(desktop)) {
         padding: 0 0 60px;
-        position: relative;
         z-index: 1;
         margin-top: -60px;
     }
