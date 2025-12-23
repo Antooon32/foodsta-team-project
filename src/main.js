@@ -1,5 +1,6 @@
 import './js/burger';
 import './js/modal';
+import './js/form';
 import ResponsiveSlider from './js/slider';
 
 const initSlider = () => {
